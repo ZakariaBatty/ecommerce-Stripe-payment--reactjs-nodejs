@@ -20,6 +20,9 @@ const SingleProduct = ({ match, history: { push } }) => {
     if (!product) {
       return push("/shop");
     }
+    if (!product) {
+      return push("/shop");
+    }
 
     setProduct(product);
   });
