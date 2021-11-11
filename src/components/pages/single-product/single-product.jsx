@@ -1,20 +1,18 @@
-/** @format */
+import React from 'react';
+import Layout from '../../shared/layout';
+import FeaturedProduct from '../../shared/featured-product';
+import {ProductsContext} from '../../../context/products-context';
+import './single-product.styles.scss';
 
-import React, { useContext, useState, useEffect } from "react";
-import Layout from "../../shared/layout";
-import { withRouter } from "react-router-dom";
-import { ProductsContext } from "../../../context/products-context";
-import "./single-product.styles.scss";
 
-const SingleProduct = ({ match, history: { push } }) => {
-  const { products } = useContext(ProductsContext);
-  const { id } = match.params;
-  const [product, setProduct] = useState(null);
+const SingleProduct = () =>{
 
-  useEffect(() => {
-    const product = products.products.find(
-      (item) => Number(item.id) === Number(id)
-    );
+        return (
+            <Layout>
+                 
+            </Layout>
+        )
+}
 
     //  if product does not exist,redict to shop page
     if (!product) {
@@ -53,3 +51,4 @@ const SingleProduct = ({ match, history: { push } }) => {
 };
 
 export default SingleProduct;
+Ò
