@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from "react-router-dom";
+import {withRouter} from 'react-router-dom';
 import studioBag from '../../assets/reusable-eco-friendly-tote-bag (1).jpg';
 import './main.section.styles.scss';
 
@@ -21,7 +21,7 @@ const MainSection = ({ history }) => {
           <button
             className="button is-button"
             id="shop-now"
-            onclick={() => history.push('/product/1')}
+            onClick={() => history.push('/product/1')}
           >
             STUDIO BAG
           </button>
@@ -31,4 +31,4 @@ const MainSection = ({ history }) => {
   );
 };
 
-export default MainSection;
+export default withRouter(MainSection);

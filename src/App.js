@@ -1,18 +1,17 @@
 import './App.scss';
-import Header from './components/header/Header';
-import Hero from './components/hero/Hero';
-import MainSection from './components/main-section/main-section.jsx';
-import FeaturedCollection from './components/featured-collection/featured-collection';
-import Footer from './components/footer/footer';
+import HomePage from './components/home-page';
+import { Route, Switch } from 'react-router-dom';
+import NotFound from './components/not-found';
+import Shop from './components/pages/shop/shop';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Hero />
-      <MainSection />
-      <FeaturedCollection/>
-      <Footer/>
+      <Switch>
+         <Route exact path="/" component={HomePage} />
+         <Route path='/shop' component={Shop} />
+         <Route path="*" component={NotFound} />
+      </Switch>
     </div>
   );
 }

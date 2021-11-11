@@ -24,7 +24,7 @@ const SHOP_DATA =[
         id:4,
         title:'Dance Bag Nylon',
         description : 'the stratus is encased in cloud-like waterproof nylon and fearures axter',
-        imageUrl : 'https://i.ibb.co/Br2w7F0/stratus-backpack',
+        imageUrl : 'https://i.ibb.co/yRKyXPJ/dance-nylon.jpg',
         price: 156,
     }
     ,
@@ -32,7 +32,7 @@ const SHOP_DATA =[
         id:5,
         title:'studio Bag Vaqueta',
         description : 'the stratus is encased in cloud-like waterproof nylon and fearures axter',
-        imageUrl : 'https://i.ibb.co/QmGdpLf/studio-bag-vaqueta.jng',
+        imageUrl : 'https://i.ibb.co/PcXVJ8m/studiobag.jpg',
         price: 156,
     }
     ,
@@ -48,7 +48,7 @@ const SHOP_DATA =[
         id:7,
         title:'studio Bag Vaqueta',
         description : 'the stratus is encased in cloud-like waterproof nylon and fearures axter',
-        imageUrl : 'https://i.ibb.co/QmGdpLf/studio-bag-vaqueta.jng',
+        imageUrl : 'https://i.ibb.co/PcXVJ8m/studiobag.jpg',
         price: 156,
     }
     ,
