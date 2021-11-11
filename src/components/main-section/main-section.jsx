@@ -1,5 +1,5 @@
 import React from 'react';
-import {withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import studioBag from '../../assets/reusable-eco-friendly-tote-bag (1).jpg';
 import './main.section.styles.scss';
 
