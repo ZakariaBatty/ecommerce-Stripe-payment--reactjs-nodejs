@@ -51,4 +51,3 @@ const SingleProduct = () =>{
 };
 
 export default SingleProduct;
-Ò
