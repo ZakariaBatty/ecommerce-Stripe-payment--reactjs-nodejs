@@ -13,7 +13,7 @@ const cartReducer = (state, action) => {
     case 'ADD_ITEM':
       // check if item is in cart
       if (!state.cartItems.find(item => item.id === action.payload.id)) {
-        state.cartItems.push({
+         state.cartItems.push({
           ...action.payload,
           quantity: 1,
         });
