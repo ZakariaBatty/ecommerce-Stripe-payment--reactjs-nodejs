@@ -23,7 +23,7 @@ const CartContextProvider = ({ children }) => {
 
   //@ return jsx
   return (
-    <CartContext.Provider value={{ contextValues }}>
+    <CartContext.Provider value={ contextValues }>
       {children}
     </CartContext.Provider>
   );
