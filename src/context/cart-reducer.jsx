@@ -23,6 +23,8 @@ const cartReducer = (state, action) => {
         cartItems: [...state.cartItems],
         ...sumItem(state.cartItems),
       };
+    case 'INCREASE':
+      return state;
     default:
       return state;
   }
