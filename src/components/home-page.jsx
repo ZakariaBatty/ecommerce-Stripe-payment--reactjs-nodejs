@@ -1,8 +1,9 @@
 import React from 'react';
+
 import Layout from './shared/layout';
 import Hero from './hero/Hero';
 import MainSection from './main-section/main-section';
-import FeaturedCollection from './featured-collection/featured-collection';
+import FeaturedCollection from './featured-collection';
 
 const HomePage = () => {
   return (
