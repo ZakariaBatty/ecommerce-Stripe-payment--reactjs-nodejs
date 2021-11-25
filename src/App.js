@@ -1,9 +1,11 @@
-import './App.scss';
-import HomePage from './components/home-page';
 import { Route, Switch } from 'react-router-dom';
-import NotFound from './components/not-found';
+
+import './App.scss';
+
+import HomePage from './components/home-page';
 import Shop from './components/pages/shop/shop';
 import SingleProduct from './components/pages/single-product/single-product';
+import NotFound from './components/not-found';
 
 function App() {
   return (
