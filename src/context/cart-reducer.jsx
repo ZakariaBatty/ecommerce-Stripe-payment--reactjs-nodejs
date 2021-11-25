@@ -1,4 +1,6 @@
-export const sumItem = cartItems => {
+/** @format */
+
+export const sumItem = (cartItems) => {
   return {
     itemCount: cartItems.reduce((total, prod) => total + prod.quantity, 0),
     total: cartItems.reduce(
@@ -10,10 +12,10 @@ export const sumItem = cartItems => {
 
 const cartReducer = (state, action) => {
   switch (action.type) {
-    case 'ADD_ITEM':
+    case "ADD_ITEM":
       // check if item is in cart
-      if (!state.cartItems.find(item => item.id === action.payload.id)) {
-         state.cartItems.push({
+      if (!state.cartItems.find((item) => item.id === action.payload.id)) {
+        state.cartItems.push({
           ...action.payload,
           quantity: 1,
         });

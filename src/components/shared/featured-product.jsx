@@ -17,7 +17,7 @@ const FeaturedProduct = (props) => {
         className="featured-image"
         onClick={() => history.push(`/product/${id}`)}>
         <img src={imageUrl} alt="product" />
-      </div>
+      </div> 
       <div className="name-price">
         <h3>{title}</h3>
         <p>$ {price}</p>
