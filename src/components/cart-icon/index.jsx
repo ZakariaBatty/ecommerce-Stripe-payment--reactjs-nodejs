@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import shopping from '../../assets/sale.png';
-import { CartContext } from '../../context/entities/CartContext';
+import shopping from 'assets/sale.png';
+import { CartContext } from 'context/entities/CartContext';
 import './cart-icon.styles.scss';
 
 const CartIcon = () => {
