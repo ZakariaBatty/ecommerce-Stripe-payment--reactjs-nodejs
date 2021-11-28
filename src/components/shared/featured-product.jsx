@@ -43,7 +43,7 @@ const FeaturedProduct = (props) => {
               <button
                 className="button is-white nomad-btn"
                 id="btn-white-outline"
-                onClick={() => increase()}>
+                onClick={() => increase(product)}>
                 ADD MORE
               </button>
             )
