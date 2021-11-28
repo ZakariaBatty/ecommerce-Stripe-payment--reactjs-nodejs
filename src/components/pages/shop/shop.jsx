@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import './shop.styles.scss';
 import Layout from '../../shared/layout';
 
-import { ProductsContext } from '../../../context/products-context';
+import { ProductsContext } from '../../../context/entities/ProductsContext';
 
 import FeaturedProduct from '../../shared/featured-product';
 

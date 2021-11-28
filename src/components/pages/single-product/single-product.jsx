@@ -6,8 +6,8 @@ import { withRouter } from "react-router-dom";
 import "./single-product.styles.scss";
 import Layout from "../../shared/layout";
 
-import { ProductsContext } from "../../../context/products-context";
-import { CartContext } from "../../../context/cart-context";
+import { ProductsContext } from "../../../context/entities/ProductsContext";
+import { CartContext } from "../../../context/entities/CartContext";
 import { isInCart } from "../../../helpers";
 
 import FeaturedCollection from "../../featured-collection";

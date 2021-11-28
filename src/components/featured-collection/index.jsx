@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import { ProductsContext } from '../../context/products-context';
+import { ProductsContext } from '../../context/entities/ProductsContext';
 
 import FeaturedProduct from '../shared/featured-product';
 

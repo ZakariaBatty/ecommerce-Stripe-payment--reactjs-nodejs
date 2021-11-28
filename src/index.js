@@ -4,16 +4,13 @@ import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 
 import App from './App';
-import ProductsContextProvider from './context/products-context';
-import CartContextProvider from './context/cart-context';
+import ContextManagerProvider from './context/ContextManager';
 
 ReactDOM.render(
   <BrowserRouter>
-    <ProductsContextProvider>
-      <CartContextProvider>
-        <App />
-      </CartContextProvider>
-    </ProductsContextProvider>
+    <ContextManagerProvider>
+      <App />
+    </ContextManagerProvider>
   </BrowserRouter>,
   document.getElementById('root')
 );

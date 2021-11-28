@@ -7,7 +7,7 @@ import "./featured-product.styles.scss";
 
 import { isInCart } from "../../helpers";
 
-import { CartContext } from "../../context/cart-context";
+import { CartContext } from "../../context/entities/CartContext";
 
 const FeaturedProduct = (props) => {
   const product = {
