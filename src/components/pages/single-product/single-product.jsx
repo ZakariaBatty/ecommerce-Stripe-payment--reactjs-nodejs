@@ -8,20 +8,19 @@ import Layout from "../../shared/layout";
 
 import { ProductsContext } from "../../../context/entities/ProductsContext";
 import { CartContext } from "../../../context/entities/CartContext";
-import { isInCart } from "../../../helpers";
 
 import FeaturedCollection from "../../featured-collection";
 
 const SingleProduct = ({ match, history: { push } }) => {
   const { products } = useContext(ProductsContext);
-  const { addProduct, cartItems } = useContext(CartContext);
+  const { addProduct, isInCart } = useContext(CartContext);
   const { id } = match.params;
 
   const selectedProduct = products.find(
     (item) => Number(item.id) === Number(id)
   );
 
-  const itemInCart = isInCart(selectedProduct, cartItems);
+  const itemInCart = isInCart(selectedProduct);
 
   if (!selectedProduct) {
     push("/shop");

@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { createContext, useReducer } from "react";
-import cartReducer from "../cart-reducer";
+import cartReducer from "../../reducers/CartReducer";
 
 export const CartContext = createContext();
 
@@ -11,18 +11,16 @@ const initialState = { cartItems: [], itemCount: 0, total: 0 };
 const CartContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(cartReducer, initialState);
 
-  //@ function for add product
-  const addProduct = (product) =>
-    dispatch({ type: "ADD_ITEM", payload: product });
-
-  const increase = (product) =>
-    dispatch({ type: "INCREASE", payload: product });
-
   //@ return state
   const contextValues = {
     ...state,
-    addProduct,
-    increase,
+    addToCart: (product) =>
+      dispatch({ type: "ADD_TO_CART", payload: product }),
+    increaseItemCountInCart: (product) =>
+      dispatch({ type: "INCREASE_PRODUCT_COUNT_IN_CART", payload: product }),
+    isInCart: (product) =>
+      state.cartItems.find((item) => item.id === product.id),
+    logCart: (from) => console.log(state, { from })
   };
 
   //@ return jsx
