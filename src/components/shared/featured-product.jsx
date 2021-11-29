@@ -5,9 +5,7 @@ import { withRouter } from "react-router-dom";
 
 import "./featured-product.styles.scss";
 
-import { isInCart } from "../../helpers";
-
-import { CartContext } from "../../context/cart-context";
+import { CartContext } from "../../context/entities/CartContext";
 
 const FeaturedProduct = (props) => {
   const product = {
@@ -18,7 +16,7 @@ const FeaturedProduct = (props) => {
     description: props.description
   };
 
-  const { addProduct, cartItems, increase } = useContext(CartContext);
+  const { addToCart, isInCart, increaseItemCountInCart } = useContext(CartContext);
 
   return (
     <div className="featured-product">
@@ -31,11 +29,11 @@ const FeaturedProduct = (props) => {
         <h3>{product.title}</h3>
         <p>$ {product.price}</p>
         {
-          !isInCart(product, cartItems)
+          !isInCart(product)
             ? (
               <button
                 className="button is-black nomad-btn"
-                onClick={() => addProduct(product)}>
+                onClick={() => addToCart(product)}>
                 ADD TO CART
               </button>
             )
@@ -43,7 +41,7 @@ const FeaturedProduct = (props) => {
               <button
                 className="button is-white nomad-btn"
                 id="btn-white-outline"
-                onClick={() => increase()}>
+                onClick={() => increaseItemCountInCart(product)}>
                 ADD MORE
               </button>
             )

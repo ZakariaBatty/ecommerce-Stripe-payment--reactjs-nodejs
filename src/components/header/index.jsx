@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CartIcon from '../cart-icon/cart-icon';
+import CartIcon from 'components/cart-icon';
 import './header.styles.scss';
 
 const Header = () => {

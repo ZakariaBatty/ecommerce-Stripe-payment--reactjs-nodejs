@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { createContext, useState } from "react";
-import SHOP_DATA from "../shop/";
+import SHOP_DATA from "../../shop";
 
 export const ProductsContext = createContext();
 
