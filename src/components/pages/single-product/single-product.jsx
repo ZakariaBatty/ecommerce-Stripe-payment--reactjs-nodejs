@@ -1,30 +1,27 @@
 /** @format */
 
-import React, { useContext } from "react";
-import { withRouter } from "react-router-dom";
+import React, { useContext } from 'react';
+import { withRouter } from 'react-router-dom';
 
-import "./single-product.styles.scss";
-import Layout from "../../shared/layout";
+import './single-product.styles.scss';
+import Layout from '../../shared/layout';
 
-import { ProductsContext } from "../../../context/products-context";
-import { CartContext } from "../../../context/cart-context";
-import { isInCart } from "../../../helpers";
+import { ProductsContext } from '../../../context/entities/ProductsContext';
+import { CartContext } from '../../../context/entities/CartContext';
 
-import FeaturedCollection from "../../featured-collection";
+import FeaturedCollection from '../../featured-collection';
 
 const SingleProduct = ({ match, history: { push } }) => {
   const { products } = useContext(ProductsContext);
-  const { addProduct, cartItems } = useContext(CartContext);
+  const { addToCart, isInCart } = useContext(CartContext);
   const { id } = match.params;
 
-  const selectedProduct = products.find(
-    (item) => Number(item.id) === Number(id)
-  );
+  const selectedProduct = products.find(item => Number(item.id) === Number(id));
 
-  const itemInCart = isInCart(selectedProduct, cartItems);
+  const itemInCart = isInCart(selectedProduct);
 
   if (!selectedProduct) {
-    push("/shop");
+    push('/shop');
     return;
   }
 
@@ -44,7 +41,8 @@ const SingleProduct = ({ match, history: { push } }) => {
               <button
                 className="button is-white nomad-btn"
                 id="btn-white-outline"
-                onClick={() => addProduct(selectedProduct)}>
+                onClick={() => addToCart(selectedProduct)}
+              >
                 ADD TO CART
               </button>
             )}
@@ -52,13 +50,15 @@ const SingleProduct = ({ match, history: { push } }) => {
               <button
                 className="button is-white nomad-btn"
                 id="btn-white-outline"
-                onClick={() => {}}>
+                onClick={() => {}}
+              >
                 ADD MORE
               </button>
             )}
             <button
               className="button is-black nomad-btn"
-              id="btn-white-outline">
+              id="btn-white-outline"
+            >
               PROCEED TO CHECKOUT
             </button>
           </div>

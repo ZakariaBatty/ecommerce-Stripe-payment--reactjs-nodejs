@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 
-import { ProductsContext } from '../../context/products-context';
+import { ProductsContext } from 'context/entities/ProductsContext';
 
-import FeaturedProduct from '../shared/featured-product';
+import FeaturedProduct from 'components/shared/featured-product';
 
 const FeaturedCollection = () => {
     const { products } = useContext(ProductsContext);

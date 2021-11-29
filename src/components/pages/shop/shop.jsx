@@ -1,11 +1,10 @@
 import React, { useContext } from 'react';
 
 import './shop.styles.scss';
-import Layout from '../../shared/layout';
+import Layout from 'components/shared/layout';
+import FeaturedProduct from 'components/shared/featured-product';
 
-import { ProductsContext } from '../../../context/products-context';
-
-import FeaturedProduct from '../../shared/featured-product';
+import { ProductsContext } from 'context/entities/ProductsContext';
 
 const Shop = () => {
   const { products } = useContext(ProductsContext);
