@@ -48,6 +48,13 @@ const cartReducer = (state, action) => {
         itemCount: calculateItemsInCartCount(getUpdatedCartItemsList(state, action)),
         total: calculateTotal(getUpdatedCartItemsList(state, action)),
       };
+    case 'REMOVED_FROM_CART':
+      return {
+        ...state,
+        cartItems: state.cartItems.filter(item => item.id !== action.payload.id),
+        itemCount: calculateItemsInCartCount(state.cartItems.filter(item => item.id !== action.payload.id)),
+        total: calculateTotal(state.cartItems.filter(item => item.id !== action.payload.id)),
+      };
     default:
       return state;
   }
