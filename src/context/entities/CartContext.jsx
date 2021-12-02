@@ -16,6 +16,7 @@ const CartContextProvider = ({ children }) => {
     ...state,
     addToCart: product => dispatch({ type: 'ADD_TO_CART', payload: product }),
     increaseItemCountInCart: product => dispatch({ type: 'INCREASE_PRODUCT_COUNT_IN_CART', payload: product }),
+    decreaseItemCountInCart: product => dispatch({ type: 'DECREASE_PRODUCT_COUNT_IN_CART', payload: product }),
     isInCart: product => state.cartItems.find(item => item.id === product.id),
     logCart: from => console.log(state, { from }),
   };
