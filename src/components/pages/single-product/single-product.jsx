@@ -4,16 +4,16 @@ import React, { useContext } from 'react';
 import { withRouter } from 'react-router-dom';
 
 import './single-product.styles.scss';
-import Layout from '../../shared/layout';
+import Layout from 'components/shared/layout';
 
-import { ProductsContext } from '../../../context/entities/ProductsContext';
-import { CartContext } from '../../../context/entities/CartContext';
+import { ProductsContext } from 'context/entities/ProductsContext';
+import { CartContext } from 'context/entities/CartContext';
 
-import FeaturedCollection from '../../featured-collection';
+import FeaturedCollection from 'components/featured-collection';
 
 const SingleProduct = ({ match, history: { push } }) => {
   const { products } = useContext(ProductsContext);
-  const { addToCart, isInCart } = useContext(CartContext);
+  const { addToCart, increaseItemCountInCart, isInCart } = useContext(CartContext);
   const { id } = match.params;
 
   const selectedProduct = products.find(item => Number(item.id) === Number(id));
@@ -50,7 +50,7 @@ const SingleProduct = ({ match, history: { push } }) => {
               <button
                 className="button is-white nomad-btn"
                 id="btn-white-outline"
-                onClick={() => {}}
+                onClick={() => increaseItemCountInCart(selectedProduct)}
               >
                 ADD MORE
               </button>

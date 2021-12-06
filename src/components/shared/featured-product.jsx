@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 
 import './featured-product.styles.scss';
 
-import { CartContext } from '../../context/entities/CartContext';
+import { CartContext } from 'context/entities/CartContext';
 
 const FeaturedProduct = props => {
   const product = {
